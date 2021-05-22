@@ -1,0 +1,52 @@
+﻿@page
+@model LogisticCompany.Pages.Automobil_.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>avtomobil</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.avtomobil.reg_number)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.avtomobil.reg_number)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.avtomobil.nom_kuzova)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.avtomobil.nom_kuzova)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.avtomobil.nom_dvigatelua)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.avtomobil.nom_dvigatelua)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.avtomobil.god_vipuska)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.avtomobil.god_vipuska)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.avtomobil.data_pos_to)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.avtomobil.data_pos_to)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="avtomobil.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,49 @@
+﻿@page
+@model LogisticCompany.Pages.marki_avto_.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>marki_avtomobilua</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="marki_avtomobilua.kod_marki" class="control-label"></label>
+                <input asp-for="marki_avtomobilua.kod_marki" class="form-control" />
+                <span asp-validation-for="marki_avtomobilua.kod_marki" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="marki_avtomobilua.opisanie" class="control-label"></label>
+                <input asp-for="marki_avtomobilua.opisanie" class="form-control" />
+                <span asp-validation-for="marki_avtomobilua.opisanie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="marki_avtomobilua.naimenovanie" class="control-label"></label>
+                <input asp-for="marki_avtomobilua.naimenovanie" class="form-control" />
+                <span asp-validation-for="marki_avtomobilua.naimenovanie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="marki_avtomobilua.ID" class="control-label"></label>
+                <input asp-for="marki_avtomobilua.ID" class="form-control" />
+                <span asp-validation-for="marki_avtomobilua.ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

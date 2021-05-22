@@ -1,0 +1,54 @@
+﻿@page
+@model LogisticCompany.Pages.dolznost_.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.dilznost[0].trebovaniya)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dilznost[0].obyzannosty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dilznost[0].oklad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dilznost[0].naimen_dolznosty)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.dilznost) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.trebovaniya)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.obyzannosty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.oklad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.naimen_dolznosty)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

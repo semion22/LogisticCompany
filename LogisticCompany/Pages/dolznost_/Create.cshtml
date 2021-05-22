@@ -1,0 +1,49 @@
+﻿@page
+@model LogisticCompany.Pages.dolznost_.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>dilznost</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="dilznost.trebovaniya" class="control-label"></label>
+                <input asp-for="dilznost.trebovaniya" class="form-control" />
+                <span asp-validation-for="dilznost.trebovaniya" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dilznost.obyzannosty" class="control-label"></label>
+                <input asp-for="dilznost.obyzannosty" class="form-control" />
+                <span asp-validation-for="dilznost.obyzannosty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dilznost.oklad" class="control-label"></label>
+                <input asp-for="dilznost.oklad" class="form-control" />
+                <span asp-validation-for="dilznost.oklad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dilznost.naimen_dolznosty" class="control-label"></label>
+                <input asp-for="dilznost.naimen_dolznosty" class="form-control" />
+                <span asp-validation-for="dilznost.naimen_dolznosty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,60 @@
+﻿@page
+@model LogisticCompany.Pages.sotrudnic_.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>sotrudnic</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="sotrudnic.vozrast" class="control-label"></label>
+                <input asp-for="sotrudnic.vozrast" class="form-control" />
+                <span asp-validation-for="sotrudnic.vozrast" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sotrudnic.pol" class="control-label"></label>
+                <input asp-for="sotrudnic.pol" class="form-control" />
+                <span asp-validation-for="sotrudnic.pol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sotrudnic.adres" class="control-label"></label>
+                <input asp-for="sotrudnic.adres" class="form-control" />
+                <span asp-validation-for="sotrudnic.adres" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sotrudnic.telephon" class="control-label"></label>
+                <input asp-for="sotrudnic.telephon" class="form-control" />
+                <span asp-validation-for="sotrudnic.telephon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sotrudnic.Pasport_dan" class="control-label"></label>
+                <input asp-for="sotrudnic.Pasport_dan" class="form-control" />
+                <span asp-validation-for="sotrudnic.Pasport_dan" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="sotrudnic.ID" />
+            <div class="form-group">
+                <label asp-for="sotrudnic.Fio" class="control-label"></label>
+                <input asp-for="sotrudnic.Fio" class="form-control" />
+                <span asp-validation-for="sotrudnic.Fio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

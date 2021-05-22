@@ -1,0 +1,49 @@
+﻿@page
+@model LogisticCompany.Pages.gruz_.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>gruz</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="gruz.ID" class="control-label"></label>
+                <input asp-for="gruz.ID" class="form-control" />
+                <span asp-validation-for="gruz.ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gruz.Naimenovanie" class="control-label"></label>
+                <input asp-for="gruz.Naimenovanie" class="form-control" />
+                <span asp-validation-for="gruz.Naimenovanie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gruz.Srok_godnosty" class="control-label"></label>
+                <input asp-for="gruz.Srok_godnosty" class="form-control" />
+                <span asp-validation-for="gruz.Srok_godnosty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gruz.osobennosty" class="control-label"></label>
+                <input asp-for="gruz.osobennosty" class="form-control" />
+                <span asp-validation-for="gruz.osobennosty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

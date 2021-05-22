@@ -1,0 +1,70 @@
+﻿@page
+@model LogisticCompany.Pages.reus_.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>reys</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="reys.data_otpravleniya" class="control-label"></label>
+                <input asp-for="reys.data_otpravleniya" class="form-control" />
+                <span asp-validation-for="reys.data_otpravleniya" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="reys.ID" />
+            <div class="form-group">
+                <label asp-for="reys.kuda" class="control-label"></label>
+                <input asp-for="reys.kuda" class="form-control" />
+                <span asp-validation-for="reys.kuda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="reys.otkuda" class="control-label"></label>
+                <input asp-for="reys.otkuda" class="form-control" />
+                <span asp-validation-for="reys.otkuda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="reys.zakazchik" class="control-label"></label>
+                <input asp-for="reys.zakazchik" class="form-control" />
+                <span asp-validation-for="reys.zakazchik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="reys.otm_o_vozvrashen" class="control-label"></label>
+                <input asp-for="reys.otm_o_vozvrashen" class="form-control" />
+                <span asp-validation-for="reys.otm_o_vozvrashen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="reys.otmetka_ob_oplate" class="control-label"></label>
+                <input asp-for="reys.otmetka_ob_oplate" class="form-control" />
+                <span asp-validation-for="reys.otmetka_ob_oplate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="reys.tsena" class="control-label"></label>
+                <input asp-for="reys.tsena" class="form-control" />
+                <span asp-validation-for="reys.tsena" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="reys.data_pribytiya" class="control-label"></label>
+                <input asp-for="reys.data_pribytiya" class="form-control" />
+                <span asp-validation-for="reys.data_pribytiya" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

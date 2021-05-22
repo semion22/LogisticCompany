@@ -1,0 +1,31 @@
+﻿@page
+@model LogisticCompany.Pages.vidy_gruza_.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Vid_gruzov</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vid_gruzov.opisanie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vid_gruzov.opisanie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vid_gruzov.naimenovanie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vid_gruzov.naimenovanie)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Vid_gruzov.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
